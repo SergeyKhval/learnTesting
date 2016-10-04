@@ -26,7 +26,7 @@ exports.config = {
     logLevel: 'silent',
     coloredLogs: true,
     screenshotPath: 'shots',
-    baseUrl: 'http://webdriver.io',
+    baseUrl: 'http://google.by',
     waitforTimeout: 10000,
     framework: 'mocha',
 
@@ -37,6 +37,10 @@ exports.config = {
 
     mochaOpts: {
         ui: 'bdd'
+    },
+
+    before: function () {
+        global.expect = require('chai').expect;
     },
 
     /**
